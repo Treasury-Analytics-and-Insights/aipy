@@ -1,0 +1,63 @@
+Response 1:
+
+Not using it in an official capacity
+Envision it being used primarily for generating text, particularly for automating customer service inquiries and for assisting with internal research and analysis. Could also be used as a coding tool or for other purposes
+Concerns around the accuracy of the outputs, also concerned about security/dealing with sensitive information and the fact that inputs will form the body of knowledge of the tool going forward (and potential  bias)
+Working through thinking on what guidance could/should look like. 
+
+Response 2:
+
+Advice has been circulated by the CTO which “basically said don’t use it for now.” At the same time, we’ve had a few people put in requests to permit its use. One official submission was to allow people to create VBA functions using chatGPT
+Using it to write code etc. is “pretty uncontroversial”, but any code generated this way should have supporting unit tests that can be used to verify the code is correct. Could apply something similar to commentary etc that chatGPT creates – e.g., require a good peer review
+Also need to recognise that what you provide may well end up being used as training data. Under no circumstances should anybody type in a name, phone number, privileged internal information, pre-embargo data etc
+Have heard that at least three NSOs, the Irish office in particular, are using chatGPT to transpile SAS code to R
+
+Response 3:
+
+Planning to have an internal session next week to discuss ChatGPT and would be happy to share any lessons that come out of it
+In the meantime, noted that it has been useful for coding, math derivations, and paraphrasing text. But can waste time with inaccurate answers in areas of limited knowledge
+
+Response 4:
+
+Use cases are evolving rapidly with new innovations like LangChain
+No discussions yet about purchasing licenses for staff access to later models
+OpenAI will retain chats, raising confidentiality concerns
+
+Response 5:
+
+Have not had a discussion as a team on its use, it’s use is very much at an individual level
+Members of his team have used ChatGPT for:
+•	Code generation, especially where less familiar with the language
+•	Ideas for how to do something in Excel
+•	Explanation for what code does
+•	Converting code between programming languages
+•	Checking our new starter test
+Supporting code commenting is a good idea, or re-writing code to be simpler. Has not heard of it being used by Policy, but would be surprised if it hadn’t
+Doesn’t see accuracy of outputs as a problem – doesn’t expect it to get it right first time, just makes getting to the solution easier. Its use is an iterative process – learn how to converse to get what you need.
+Confidentiality and security are an issue, but much the same as if someone using a tool like Grammarly
+
+Response 6:
+
+They are allowed to use GPT but can’t feed it specific error messages or parts of the existing code base. This is because they don’t want their competitors or anyone to exploit the security vulnerabilities that GPT might be privy to. Noted that there are features in GPT where you can stop it from sharing data with OpenAI (i.e., not letting it your code become part of OpenAI’s training data). Also noted that if people are sceptical of Open AI’s probity, then it is useful to keep in mind that Microsoft is their main investor. Same with GitHub CoPilot (GitHub owned by Microsoft)
+
+Response 7:
+
+Taking first tentative steps – using it on the coding side in a “pretty conventional way” (e.g. to diagnose bits of code, ask qns in place of googling/stack overflow, or generate SQL queries…)
+Have been conversations on whether policy teams can use it to summarise large volumes of consultation responses – and indeed whether they are on the verge of submitters realising that they can use these models to generate large volumes of submissions 
+The other area they are interested in – although the current generation of LLM’s don’t seem to be quite there yet – is the ability to actually parse datasets for insights. They maintain a few public-facing dashboards and so are keeping an eye on is any developments that would allow them to integrate chat bots with the dashboards
+Keen to keep this discussion going and are planning to report to their board on this subject at some point
+
+Response 8:
+
+Earlier this week took part in a conference call across 10 or so National Govt Offices on this topic. They have agreed to set up a workshop to try and coordinate across the National Govt Offices to form an agreed position. It is likely that a more formal approach will be established to investigate ChatGPT for statistical offices
+Had a separate chat with the Irish Office, to discuss their project to move from SAS to R through ChatGPT. The literature suggests ChatGPT (and other generative AI) are quite ‘stable’ for such tasks. Beyond that they haven’t explicitly put any thought into the use of ChatGPT, but plan to do so in the next few months
+Sees value in a few of getting together to have a chat about the use etc of ChatGPT across govt analytical agencies
+
+Response 9:
+
+Have tested it briefly to document some SAS code. Yet to do the full documentation but would be happy to share their experience – especially around accuracy. No security and confidentiality concerns for this particular use case of code documentation
+Have been considering the potential implications of AI and tools like ChatGPT. Have reached out to DIA, IRD and DPMC to share information. Happy to share information with us and keen to meet virtually next week.
+
+Response 10:
+
+Taking a conservative approach and preventing its use until more is understood about its utility and security

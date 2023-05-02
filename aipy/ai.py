@@ -25,10 +25,10 @@ def describe_code(code_path, question=DEFAULT_QUESTION, max_tokens=2000):
     return completions
 
 
-def ask_gpt(question):
+def ask_gpt(question, max_tokens = 2000):
     messages=[
         {"role": "system", "content": 'You are wise and helpful.'},
         {"role": "user", "content": question},
     ]
-    completions = gptchat(messages, max_tokens = 2000)
+    completions = gptchat(messages, max_tokens)
     return completions
