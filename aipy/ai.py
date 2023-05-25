@@ -21,10 +21,9 @@ class Chat(object):
 
 class CodeInspector(Chat):
     lang_map = {'py': 'Python', 'R': 'R'}
-    default_question = 'Describe the purpose and algorithm for this code'
-
+ 
     def __init__(self, code_path) -> None:
-        language = lang_map[os.path.splitext(code_path)[1][1:]]
+        language = CodeInspector.lang_map[os.path.splitext(code_path)[1][1:]]
         with open(code_path) as file:
             self.code_path = code_path
             self.code = file.read()
@@ -35,5 +34,5 @@ class CodeInspector(Chat):
     def ask(self, question, temperature=0.2):
         return super().ask(question, temperature=temperature)
 
-    def describe(self, question = CodeInspector.default_question):
-        self.ask(question, temperature=temperature)
+    def describe(self, temperature=0.2):
+        self.ask('Describe the purpose and algorithm for this code', temperature=temperature)
