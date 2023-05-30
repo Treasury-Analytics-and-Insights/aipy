@@ -66,9 +66,9 @@ class Chat(object):
 
     def suggest_filename(self):
         """Generates a suggested filename for saving the chat log."""
-        topics = self.get_topics()
+        topics = [topic.replace(' ' , '_') for topic in self.get_topics()]
 
-        filename = f"{'_'.join(topics)}_{datetime.datetime.now().strftime('%y%m%d_%H%M%S')}.pkl"
+        filename = f"{'-'.join(topics)}_{datetime.datetime.now().strftime('%y%m%d_%H%M%S')}.pkl"
 
         return filename
     
@@ -167,10 +167,13 @@ class ChatDB(object):
                 topics = chat.get_topics()
             except:
                 Warning('Model could not determine topics')
-        name = '_'.join(topics)
+
+        date = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        name = '-'.join([topic.replace(' ' , '_') for topic in chat.get_topics()]+[date])
+
         doc = {
             'name': name,
-            'date': datetime.datetime.now().strftime("%Y%m%d_%H%M%S"),
+            'date': date,
             'topics': topics,
             'summary': chat.summarise(),
             'messages': chat.messages
