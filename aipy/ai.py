@@ -40,7 +40,11 @@ class Chat(object):
                 {"role": "system", "content": 'You are wise and helpful.'}]
         else:
             self.messages = messages
-        
+
+    def add_context(self, context):
+        """Add context to the chat - chatgpt is not called"""
+        self.messages.append({"role": "user", "content": context}) 
+
     def ask(self, question, max_tokens=2000, model=DEFAULT_MODEL, temperature=1, keep=True) -> str:
         """Sends a message to the GPT-3 API and returns the response.  
         By default append the prompt and response to the chat history""" 
@@ -118,8 +122,9 @@ class CodeInspector(Chat):
             self.code_path = code_path
             self.code = f.read()
         self.messages=[
-            {"role": "system", "content": f'You are an expert in the {language} language.'},
-            {"role": "user", "content": f"Here is some code I want to ask questions about: {self.code}"}]   
+            {"role": "system", "content": f'You are an expert in the {language} language.'}]
+        
+        self.add_context(f"Here is some code I want to ask questions about: {self.code}")   
 
 
     def describe(self, temperature=0.2):
@@ -213,8 +218,6 @@ class ChatDB(object):
         Closes the database connection.
         """
         self.db.close()
-
-
 
 
 def load_chat(path):
