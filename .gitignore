@@ -1,2 +1,8 @@
 *.pyc
 pycache
+build/*
+dist/*
+*.egg-info
+*.egg
+*.log
+*.out

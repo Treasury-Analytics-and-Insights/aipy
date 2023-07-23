@@ -70,7 +70,7 @@ class Chat(object):
             'Give me up to three descriptive one word topics for this chat, in a JSON list, '
             'with no introduction or explanation.  It is important that you use square brackets '
             'to format the list so that I can parse the output', 
-            max_tokens=40, keep=False, temperature = 0.2)
+            max_tokens=40, model=model, keep=False, temperature = 0.2)
         self.topics = json.loads(a[a.index('['):a.index(']')+1])
 
     def get_summary(self, model=DEFAULT_MODEL):
@@ -79,7 +79,7 @@ class Chat(object):
         return self.summary
 
     def format(self) -> str:
-        """For mat the conversation text"""
+        """Format the conversation text"""
         txt = '\n\n-----------------------------------------\n\n'.join(
             [msg['content'] for msg in self.messages[self.print_from:]])
         return txt
