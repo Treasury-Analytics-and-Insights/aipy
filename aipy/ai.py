@@ -132,7 +132,9 @@ class CodeInspector(Chat):
         self.messages=[
             {"role": "system", "content": f'You are an expert in the {language} language.'}]
         
-        self.add_context(f"Here is some code I want to ask questions about: {self.code}")   
+        self.add_context(f"Here is some code I want to ask questions about: {self.code}")
+        self.topics = None
+        self.summary = None   
 
 
     def describe(self, temperature=0.2, model=DEFAULT_MODEL):
