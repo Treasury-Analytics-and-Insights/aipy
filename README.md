@@ -4,9 +4,9 @@ Code for interacting with OpenAI models in python and storing chats in a local d
 # Getting Started
 1.	Installation process
 ```
-python setup.py install --user
+pip install . --user
 ```
-2.	Software dependencies
+2.	Software dependencies  (the above might already take care of this!)
 ```
 pip install -r requirements.txt --user
 ```
