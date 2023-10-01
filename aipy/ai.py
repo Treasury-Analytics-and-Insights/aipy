@@ -97,7 +97,7 @@ class Chat(object):
             path = os.path.join(directory, f"{'_'.join(self.topics)}_chat.txt")
 
         txt = self.format()        
-        with open(path, 'w') as f:
+        with open(path, 'w', encoding="utf8") as f:
             f.write(txt)
 
         print(f'Saved chat log to {path}')
@@ -208,7 +208,7 @@ class ChatDB(object):
         - A list of Chat objects matching the query.
         """
         matches = self.db.search(query)
-        return [Chat.from_db_doc(doc) for doc in matches]
+        return [Chat.from_db_doc(ChatDoc(**doc)) for doc in matches]
     
     def close(self) -> None:
         """
