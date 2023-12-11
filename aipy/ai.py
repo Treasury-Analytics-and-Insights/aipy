@@ -14,10 +14,10 @@ from collections import namedtuple
 import datetime
 import json
 import os
-import pickle
 
 import openai
 from prettytable import PrettyTable
+import tiktoken
 import tinydb 
 
 DEFAULT_MODEL = 'gpt-3.5-turbo'
@@ -116,6 +116,14 @@ class Chat(object):
     @staticmethod
     def from_db_doc(doc:ChatDoc):
         return Chat(messages=doc.messages, topics=doc.topics, summary=doc.summary)
+    
+    def get_num_tokens(self, encoding_name='gpt-4'):
+        content = '\n'.join([m['content'] for m in self.messages])
+        encoding = tiktoken.encoding_for_model(encoding_name)
+        num_tokens = len(encoding.encode(string))
+        return num_tokens
+
+
 
 
 
