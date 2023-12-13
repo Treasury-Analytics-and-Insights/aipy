@@ -120,7 +120,7 @@ class Chat(object):
     def get_num_tokens(self, encoding_name='gpt-4'):
         content = '\n'.join([m['content'] for m in self.messages])
         encoding = tiktoken.encoding_for_model(encoding_name)
-        num_tokens = len(encoding.encode(string))
+        num_tokens = len(encoding.encode(content))
         return num_tokens
 
 
